@@ -1,10 +1,11 @@
 import adapter from '@sveltejs/adapter-static';
 
-export default {
+const config = {
   kit: {
-    adapter: adapter({ fallback: 'index.html' }),
-    paths: {
-      base: '/portfolio-civica'
-    }
+    adapter: adapter({
+      fallback: '404.html'
+    })
   }
 };
+
+export default config;
