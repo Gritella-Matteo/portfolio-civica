@@ -1,0 +1,6 @@
+@echo off
+echo Installazione dipendenze in corso...
+call npm install
+echo.
+echo Avvio del server di sviluppo...
+call npm run dev -- --open
