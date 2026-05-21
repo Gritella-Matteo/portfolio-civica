@@ -47,13 +47,6 @@ declare module '$env/static/private' {
 	export const ComSpec: string;
 	export const DriverData: string;
 	export const EDITOR: string;
-	export const EFC_11332_1262719628: string;
-	export const EFC_11332_1592913036: string;
-	export const EFC_11332_2283032206: string;
-	export const EFC_11332_3789132940: string;
-	export const EFC_11332_4126798990: string;
-	export const FPS_BROWSER_APP_PROFILE_STRING: string;
-	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
 	export const HOMEPATH: string;
@@ -116,6 +109,9 @@ declare module '$env/static/private' {
 	export const USERNAME: string;
 	export const USERPROFILE: string;
 	export const windir: string;
+	export const WSLENV: string;
+	export const WT_PROFILE_ID: string;
+	export const WT_SESSION: string;
 	export const ZES_ENABLE_SYSMAN: string;
 	export const __PSLockDownPolicy: string;
 }
@@ -213,13 +209,6 @@ declare module '$env/dynamic/private' {
 		ComSpec: string;
 		DriverData: string;
 		EDITOR: string;
-		EFC_11332_1262719628: string;
-		EFC_11332_1592913036: string;
-		EFC_11332_2283032206: string;
-		EFC_11332_3789132940: string;
-		EFC_11332_4126798990: string;
-		FPS_BROWSER_APP_PROFILE_STRING: string;
-		FPS_BROWSER_USER_PROFILE_STRING: string;
 		HOME: string;
 		HOMEDRIVE: string;
 		HOMEPATH: string;
@@ -282,6 +271,9 @@ declare module '$env/dynamic/private' {
 		USERNAME: string;
 		USERPROFILE: string;
 		windir: string;
+		WSLENV: string;
+		WT_PROFILE_ID: string;
+		WT_SESSION: string;
 		ZES_ENABLE_SYSMAN: string;
 		__PSLockDownPolicy: string;
 		[key: `PUBLIC_${string}`]: undefined;

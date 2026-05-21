@@ -3,6 +3,8 @@ import { SvelteKitError, HttpError } from "@sveltejs/kit/internal";
 import { with_request_store } from "@sveltejs/kit/internal/server";
 import * as devalue from "devalue";
 import { t as text_encoder, b as base64_encode, a as base64_decode } from "./utils.js";
+import { e as experimental_async_required, g as get_render_context, h as hydratable_serialization_failed } from "./render-context.js";
+import "clsx";
 function noop() {
 }
 function once(fn) {
@@ -14,7 +16,6 @@ function once(fn) {
     return result = fn();
   };
 }
-const BROWSER = false;
 const SVELTE_KIT_ASSETS = "/_svelte_kit_assets";
 const ENDPOINT_METHODS = ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"];
 const MUTATIVE_METHODS = ["POST", "PUT", "PATCH", "DELETE"];
@@ -761,6 +762,64 @@ function get_node_type(node_id) {
   const dot_parts = filename.split(".");
   return dot_parts.slice(0, -1).join(".");
 }
+function hydratable(key, fn) {
+  {
+    experimental_async_required();
+  }
+  const { hydratable: hydratable2 } = get_render_context();
+  let entry = hydratable2.lookup.get(key);
+  if (entry !== void 0) {
+    return (
+      /** @type {T} */
+      entry.value
+    );
+  }
+  const value = fn();
+  entry = encode(key, value, hydratable2.unresolved_promises);
+  hydratable2.lookup.set(key, entry);
+  return value;
+}
+function encode(key, value, unresolved) {
+  const entry = { value, serialized: "" };
+  let uid = 1;
+  entry.serialized = devalue.uneval(entry.value, (value2, uneval) => {
+    if (is_promise(value2)) {
+      const placeholder = `"${uid++}"`;
+      const p = value2.then((v) => {
+        entry.serialized = entry.serialized.replace(
+          placeholder,
+          // use the function form here to prevent any string replacement characters from being interpreted
+          // in `v`, as it's potentially user-controlled and therefore potentially malicious.
+          // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#specifying_a_string_as_the_replacement
+          () => `r(${uneval(v)})`
+        );
+      }).catch(
+        (devalue_error) => hydratable_serialization_failed(
+          key,
+          serialization_stack(entry.stack, devalue_error?.stack)
+        )
+      );
+      p.catch(() => {
+      }).finally(() => unresolved?.delete(p));
+      (entry.promises ??= []).push(p);
+      return placeholder;
+    }
+  });
+  return entry;
+}
+function is_promise(value) {
+  return Object.prototype.toString.call(value) === "[object Promise]";
+}
+function serialization_stack(root_stack, uneval_stack) {
+  let out = "";
+  if (root_stack) {
+    out += root_stack + "\n";
+  }
+  if (uneval_stack) {
+    out += "Caused by:\n" + uneval_stack + "\n";
+  }
+  return out || "<missing stack trace>";
+}
 const INVALIDATED_PARAM = "x-sveltekit-invalidated";
 const TRAILING_SLASH_PARAM = "x-sveltekit-trailing-slash";
 function stringify(data, transport) {
@@ -924,17 +983,17 @@ function split_remote_key(key) {
   };
 }
 function unfriendly_hydratable(key, fn) {
-  {
+  if (!hydratable) {
     throw new Error("Remote functions require Svelte 5.44.0 or later");
   }
+  return hydratable(key, fn);
 }
 export {
   set_nested_value as A,
-  BROWSER as B,
-  flatten_issues as C,
-  deep_set as D,
+  flatten_issues as B,
+  deep_set as C,
+  stringify_remote_arg as D,
   ENDPOINT_METHODS as E,
-  stringify_remote_arg as F,
   INVALIDATED_PARAM as I,
   MUTATIVE_METHODS as M,
   PAGE_METHODS as P,

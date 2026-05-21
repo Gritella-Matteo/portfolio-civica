@@ -1,9 +1,11 @@
 import { get_request_store, with_request_store } from "@sveltejs/kit/internal/server";
 import { parse } from "devalue";
 import { error, json } from "@sveltejs/kit";
-import { j as create_remote_key, x as unfriendly_hydratable, e as noop, M as MUTATIVE_METHODS, y as create_field_proxy, z as normalize_issue, A as set_nested_value, C as flatten_issues, D as deep_set, F as stringify_remote_arg, l as stringify, B as BROWSER, h as handle_error_and_jsonify, p as parse_remote_arg } from "./chunks/shared.js";
+import { j as create_remote_key, x as unfriendly_hydratable, e as noop, l as stringify, M as MUTATIVE_METHODS, y as create_field_proxy, z as normalize_issue, A as set_nested_value, B as flatten_issues, C as deep_set, D as stringify_remote_arg, h as handle_error_and_jsonify, p as parse_remote_arg } from "./chunks/shared.js";
 import { ValidationError, HttpError, SvelteKitError } from "@sveltejs/kit/internal";
-import { b as base, c as app_dir, p as prerendering } from "./chunks/environment.js";
+import { B as BROWSER } from "./chunks/render-context.js";
+import { b as base, c as app_dir } from "./chunks/server.js";
+import { p as prerendering } from "./chunks/environment.js";
 function create_validator(validate_or_fn, maybe_fn) {
   if (!maybe_fn) {
     return (arg) => {
@@ -44,9 +46,9 @@ async function get_response(internals, payload, state, get_result) {
   };
   entry.serialize ||= !!state.is_in_universal_load;
   if (state.is_in_render && internals.id) {
-    create_remote_key(internals.id, payload);
+    const remote_key = create_remote_key(internals.id, payload);
     Promise.resolve(entry.data).then((value) => {
-      void unfriendly_hydratable();
+      void unfriendly_hydratable(remote_key, () => stringify(value, state.transport));
     }).catch(noop);
   }
   return entry.data;

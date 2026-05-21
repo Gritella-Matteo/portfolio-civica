@@ -1,17 +1,17 @@
 <script>
   import { page } from '$app/stores';
+  import { base } from '$app/paths';
   let menuOpen = false;
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/educazione-civica', label: 'Ed. Civica' },
-    { href: '/chi-sono', label: 'Chi sono' },
+    { href: `${base}/`, label: 'Home' },
+    { href: `${base}/educazione-civica`, label: 'Ed. Civica' },
+    { href: `${base}/chi-sono`, label: 'Chi sono' },
   ];
 </script>
-
 <nav class="navbar">
   <div class="container nav-inner">
-    <a href="/" class="logo">
+    <a href="{base}/" class="logo">
       <span class="logo-icon">◈</span>
       <span class="logo-text">Il Mio Portfolio</span>
     </a>

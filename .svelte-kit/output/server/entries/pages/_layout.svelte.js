@@ -1,42 +1,65 @@
-import { c as create_ssr_component, b as subscribe, e as each, d as add_attribute, f as escape, v as validate_component } from "../../chunks/ssr.js";
-import { p as page } from "../../chunks/stores.js";
-const css$2 = {
-  code: ".navbar.svelte-232c0r.svelte-232c0r{position:sticky;top:0;z-index:100;background:rgba(247,244,238,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}.nav-inner.svelte-232c0r.svelte-232c0r{display:flex;align-items:center;justify-content:space-between;height:64px}.logo.svelte-232c0r.svelte-232c0r{display:flex;align-items:center;gap:10px;font-weight:500;color:var(--ink)}.logo-icon.svelte-232c0r.svelte-232c0r{font-size:1.4rem;color:var(--accent);line-height:1}.logo-text.svelte-232c0r.svelte-232c0r{font-family:var(--font-display);font-size:1.1rem}.nav-links.svelte-232c0r.svelte-232c0r{display:flex;list-style:none;gap:0.5rem;align-items:center}.nav-links.svelte-232c0r a.svelte-232c0r{display:block;padding:6px 16px;border-radius:100px;font-size:0.9rem;color:var(--ink-muted);transition:all 0.2s}.nav-links.svelte-232c0r a.svelte-232c0r:hover{color:var(--ink);background:var(--border)}.nav-links.svelte-232c0r a.active.svelte-232c0r{color:var(--accent);background:var(--accent-light);font-weight:500}.hamburger.svelte-232c0r.svelte-232c0r{display:none;background:none;border:none;width:32px;height:32px;position:relative;flex-direction:column;justify-content:center;align-items:center}.hamburger.svelte-232c0r span.svelte-232c0r,.hamburger.svelte-232c0r span.svelte-232c0r::before,.hamburger.svelte-232c0r span.svelte-232c0r::after{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.3s;position:relative}.hamburger.svelte-232c0r span.svelte-232c0r::before,.hamburger.svelte-232c0r span.svelte-232c0r::after{content:'';position:absolute}.hamburger.svelte-232c0r span.svelte-232c0r::before{top:-7px}.hamburger.svelte-232c0r span.svelte-232c0r::after{top:7px}.hamburger.svelte-232c0r span.open.svelte-232c0r{background:transparent}.hamburger.svelte-232c0r span.open.svelte-232c0r::before{transform:rotate(45deg);top:0}.hamburger.svelte-232c0r span.open.svelte-232c0r::after{transform:rotate(-45deg);top:0}@media(max-width: 600px){.hamburger.svelte-232c0r.svelte-232c0r{display:flex}.nav-links.svelte-232c0r.svelte-232c0r{display:none;position:absolute;top:64px;left:0;right:0;background:var(--cream);flex-direction:column;padding:1rem 1.25rem 1.5rem;border-bottom:1px solid var(--border);gap:4px}.nav-links.open.svelte-232c0r.svelte-232c0r{display:flex}.nav-links.svelte-232c0r a.svelte-232c0r{padding:10px 16px}}",
-  map: `{"version":3,"file":"Navbar.svelte","sources":["Navbar.svelte"],"sourcesContent":["<script>\\n  import { page } from '$app/stores';\\n  let menuOpen = false;\\n\\n  const navLinks = [\\n    { href: '/', label: 'Home' },\\n    { href: '/educazione-civica', label: 'Ed. Civica' },\\n    { href: '/chi-sono', label: 'Chi sono' },\\n  ];\\n<\/script>\\n\\n<nav class=\\"navbar\\">\\n  <div class=\\"container nav-inner\\">\\n    <a href=\\"/\\" class=\\"logo\\">\\n      <span class=\\"logo-icon\\">◈</span>\\n      <span class=\\"logo-text\\">Il Mio Portfolio</span>\\n    </a>\\n    <button class=\\"hamburger\\" aria-label=\\"Menu\\" on:click={() => menuOpen = !menuOpen}>\\n      <span class:open={menuOpen}></span>\\n    </button>\\n    <ul class=\\"nav-links\\" class:open={menuOpen}>\\n      {#each navLinks as link}\\n        <li>\\n          <a href={link.href} class:active={$page.url.pathname === link.href} on:click={() => menuOpen = false}>\\n            {link.label}\\n          </a>\\n        </li>\\n      {/each}\\n    </ul>\\n  </div>\\n</nav>\\n\\n<style>\\n  .navbar { position: sticky; top: 0; z-index: 100; background: rgba(247,244,238,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }\\n  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }\\n  .logo { display: flex; align-items: center; gap: 10px; font-weight: 500; color: var(--ink); }\\n  .logo-icon { font-size: 1.4rem; color: var(--accent); line-height: 1; }\\n  .logo-text { font-family: var(--font-display); font-size: 1.1rem; }\\n  .nav-links { display: flex; list-style: none; gap: 0.5rem; align-items: center; }\\n  .nav-links a { display: block; padding: 6px 16px; border-radius: 100px; font-size: 0.9rem; color: var(--ink-muted); transition: all 0.2s; }\\n  .nav-links a:hover { color: var(--ink); background: var(--border); }\\n  .nav-links a.active { color: var(--accent); background: var(--accent-light); font-weight: 500; }\\n  .hamburger { display: none; background: none; border: none; width: 32px; height: 32px; position: relative; flex-direction: column; justify-content: center; align-items: center; }\\n  .hamburger span, .hamburger span::before, .hamburger span::after { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: all 0.3s; position: relative; }\\n  .hamburger span::before, .hamburger span::after { content: ''; position: absolute; }\\n  .hamburger span::before { top: -7px; } .hamburger span::after { top: 7px; }\\n  .hamburger span.open { background: transparent; }\\n  .hamburger span.open::before { transform: rotate(45deg); top: 0; }\\n  .hamburger span.open::after { transform: rotate(-45deg); top: 0; }\\n  @media (max-width: 600px) {\\n    .hamburger { display: flex; }\\n    .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--cream); flex-direction: column; padding: 1rem 1.25rem 1.5rem; border-bottom: 1px solid var(--border); gap: 4px; }\\n    .nav-links.open { display: flex; }\\n    .nav-links a { padding: 10px 16px; }\\n  }\\n</style>\\n"],"names":[],"mappings":"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"}`
-};
-const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $page, $$unsubscribe_page;
-  $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  const navLinks = [
-    { href: "/", label: "Home" },
-    {
-      href: "/educazione-civica",
-      label: "Ed. Civica"
+import { g as getContext, a as attr, b as attr_class, e as ensure_array_like, s as store_get, c as escape_html, u as unsubscribe_stores, d as stringify, f as slot } from "../../chunks/renderer.js";
+import "clsx";
+import "@sveltejs/kit/internal";
+import "../../chunks/exports.js";
+import "../../chunks/utils.js";
+import "@sveltejs/kit/internal/server";
+import "../../chunks/root.js";
+import "../../chunks/state.svelte.js";
+import { b as base } from "../../chunks/server.js";
+const getStores = () => {
+  const stores$1 = getContext("__svelte__");
+  return {
+    /** @type {typeof page} */
+    page: {
+      subscribe: stores$1.page.subscribe
     },
-    { href: "/chi-sono", label: "Chi sono" }
-  ];
-  $$result.css.add(css$2);
-  $$unsubscribe_page();
-  return `<nav class="navbar svelte-232c0r"><div class="container nav-inner svelte-232c0r"><a href="/" class="logo svelte-232c0r" data-svelte-h="svelte-1nz7ekp"><span class="logo-icon svelte-232c0r">◈</span> <span class="logo-text svelte-232c0r">Il Mio Portfolio</span></a> <button class="hamburger svelte-232c0r" aria-label="Menu"><span class="${["svelte-232c0r", ""].join(" ").trim()}"></span></button> <ul class="${["nav-links svelte-232c0r", ""].join(" ").trim()}">${each(navLinks, (link) => {
-    return `<li><a${add_attribute("href", link.href, 0)} class="${["svelte-232c0r", $page.url.pathname === link.href ? "active" : ""].join(" ").trim()}">${escape(link.label)}</a> </li>`;
-  })}</ul></div> </nav>`;
-});
-const css$1 = {
-  code: "footer.svelte-f47k2{border-top:1px solid var(--border);padding:2rem 0;margin-top:4rem}.footer-inner.svelte-f47k2{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}.footer-brand.svelte-f47k2{font-family:var(--font-display);color:var(--ink-muted);font-size:0.95rem}.footer-copy.svelte-f47k2{font-size:0.85rem;color:var(--ink-faint)}",
-  map: '{"version":3,"file":"Footer.svelte","sources":["Footer.svelte"],"sourcesContent":["<footer>\\n  <div class=\\"container footer-inner\\">\\n    <p class=\\"footer-brand\\">◈ Portfolio Scolastico</p>\\n    <p class=\\"footer-copy\\">Anno Scolastico 2025–2026</p>\\n  </div>\\n</footer>\\n<style>\\n  footer { border-top: 1px solid var(--border); padding: 2rem 0; margin-top: 4rem; }\\n  .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }\\n  .footer-brand { font-family: var(--font-display); color: var(--ink-muted); font-size: 0.95rem; }\\n  .footer-copy { font-size: 0.85rem; color: var(--ink-faint); }\\n</style>\\n"],"names":[],"mappings":"AAOE,mBAAO,CAAE,UAAU,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,QAAQ,CAAC,CAAE,OAAO,CAAE,IAAI,CAAC,CAAC,CAAE,UAAU,CAAE,IAAM,CACjF,0BAAc,CAAE,OAAO,CAAE,IAAI,CAAE,WAAW,CAAE,MAAM,CAAE,eAAe,CAAE,aAAa,CAAE,SAAS,CAAE,IAAI,CAAE,GAAG,CAAE,MAAQ,CAClH,0BAAc,CAAE,WAAW,CAAE,IAAI,cAAc,CAAC,CAAE,KAAK,CAAE,IAAI,WAAW,CAAC,CAAE,SAAS,CAAE,OAAS,CAC/F,yBAAa,CAAE,SAAS,CAAE,OAAO,CAAE,KAAK,CAAE,IAAI,WAAW,CAAG"}'
+    /** @type {typeof navigating} */
+    navigating: {
+      subscribe: stores$1.navigating.subscribe
+    },
+    /** @type {typeof updated} */
+    updated: stores$1.updated
+  };
 };
-const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$1);
-  return `<footer class="svelte-f47k2" data-svelte-h="svelte-cynw8l"><div class="container footer-inner svelte-f47k2"><p class="footer-brand svelte-f47k2">◈ Portfolio Scolastico</p> <p class="footer-copy svelte-f47k2">Anno Scolastico 2025–2026</p></div> </footer>`;
-});
-const css = {
-  code: "main.svelte-ytxnn3{min-height:calc(100vh - 64px)}",
-  map: `{"version":3,"file":"+layout.svelte","sources":["+layout.svelte"],"sourcesContent":["<script>\\n  import '../app.css';\\n  import Navbar from '$lib/components/Navbar.svelte';\\n  import Footer from '$lib/components/Footer.svelte';\\n<\/script>\\n<Navbar />\\n<main><slot /></main>\\n<Footer />\\n<style>\\n  main { min-height: calc(100vh - 64px); }\\n</style>\\n"],"names":[],"mappings":"AASE,kBAAK,CAAE,UAAU,CAAE,KAAK,KAAK,CAAC,CAAC,CAAC,IAAI,CAAG"}`
+const page = {
+  subscribe(fn) {
+    const store = getStores().page;
+    return store.subscribe(fn);
+  }
 };
-const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css);
-  return `${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})} <main class="svelte-ytxnn3">${slots.default ? slots.default({}) : ``}</main> ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
-});
+function Navbar($$renderer, $$props) {
+  $$renderer.component(($$renderer2) => {
+    var $$store_subs;
+    let menuOpen = false;
+    const navLinks = [
+      { href: `${base}/`, label: "Home" },
+      { href: `${base}/educazione-civica`, label: "Ed. Civica" },
+      { href: `${base}/chi-sono`, label: "Chi sono" }
+    ];
+    $$renderer2.push(`<nav class="navbar svelte-rfuq4y"><div class="container nav-inner svelte-rfuq4y"><a${attr("href", `${stringify(base)}/`)} class="logo svelte-rfuq4y"><span class="logo-icon svelte-rfuq4y">◈</span> <span class="logo-text svelte-rfuq4y">Il Mio Portfolio</span></a> <button class="hamburger svelte-rfuq4y" aria-label="Menu"><span${attr_class("svelte-rfuq4y", void 0, { "open": menuOpen })}></span></button> <ul${attr_class("nav-links svelte-rfuq4y", void 0, { "open": menuOpen })}><!--[-->`);
+    const each_array = ensure_array_like(navLinks);
+    for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
+      let link = each_array[$$index];
+      $$renderer2.push(`<li><a${attr("href", link.href)}${attr_class("svelte-rfuq4y", void 0, {
+        "active": store_get($$store_subs ??= {}, "$page", page).url.pathname === link.href
+      })}>${escape_html(link.label)}</a></li>`);
+    }
+    $$renderer2.push(`<!--]--></ul></div></nav>`);
+    if ($$store_subs) unsubscribe_stores($$store_subs);
+  });
+}
+function Footer($$renderer) {
+  $$renderer.push(`<footer class="svelte-jz8lnl"><div class="container footer-inner svelte-jz8lnl"><p class="footer-brand svelte-jz8lnl">◈ Portfolio Scolastico</p> <p class="footer-copy svelte-jz8lnl">Anno Scolastico 2025–2026</p></div></footer>`);
+}
+function _layout($$renderer, $$props) {
+  Navbar($$renderer);
+  $$renderer.push(`<!----> <main class="svelte-12qhfyh"><!--[-->`);
+  slot($$renderer, $$props, "default", {});
+  $$renderer.push(`<!--]--></main> `);
+  Footer($$renderer);
+  $$renderer.push(`<!---->`);
+}
 export {
-  Layout as default
+  _layout as default
 };

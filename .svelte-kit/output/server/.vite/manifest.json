@@ -5,8 +5,10 @@
     "src": ".svelte-kit/generated/server/internal.js",
     "isEntry": true,
     "imports": [
-      "_internal.js",
-      "_environment.js"
+      "_root.js",
+      "_environment.js",
+      "_server.js",
+      "_internal.js"
     ]
   },
   "_data.js": {
@@ -21,38 +23,59 @@
     "file": "chunks/exports.js",
     "name": "exports"
   },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "name": "index",
+    "imports": [
+      "_renderer.js"
+    ]
+  },
   "_internal.js": {
     "file": "chunks/internal.js",
     "name": "internal",
     "imports": [
-      "_ssr.js",
-      "_ssr2.js",
-      "_environment.js"
+      "_root.js",
+      "_environment.js",
+      "_server.js"
     ]
+  },
+  "_render-context.js": {
+    "file": "chunks/render-context.js",
+    "name": "render-context"
+  },
+  "_renderer.js": {
+    "file": "chunks/renderer.js",
+    "name": "renderer",
+    "imports": [
+      "_render-context.js"
+    ]
+  },
+  "_root.js": {
+    "file": "chunks/root.js",
+    "name": "root",
+    "imports": [
+      "_renderer.js"
+    ]
+  },
+  "_server.js": {
+    "file": "chunks/server.js",
+    "name": "server"
   },
   "_shared.js": {
     "file": "chunks/shared.js",
     "name": "shared",
     "imports": [
-      "_utils.js"
+      "_utils.js",
+      "_render-context.js"
     ]
   },
-  "_ssr.js": {
-    "file": "chunks/ssr.js",
-    "name": "ssr"
-  },
-  "_ssr2.js": {
-    "file": "chunks/ssr2.js",
-    "name": "ssr"
-  },
-  "_stores.js": {
-    "file": "chunks/stores.js",
-    "name": "stores",
+  "_state.svelte.js": {
+    "file": "chunks/state.svelte.js",
+    "name": "state.svelte",
     "imports": [
-      "_ssr.js",
+      "_renderer.js",
       "_exports.js",
-      "_utils.js",
-      "_ssr2.js"
+      "_root.js"
     ]
   },
   "_utils.js": {
@@ -66,17 +89,23 @@
     "isEntry": true,
     "imports": [
       "_shared.js",
+      "_render-context.js",
+      "_server.js",
       "_environment.js"
     ]
   },
-  "node_modules/@sveltejs/kit/src/runtime/components/svelte-4/error.svelte": {
+  "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte": {
     "file": "entries/fallbacks/error.svelte.js",
     "name": "entries/fallbacks/error.svelte",
-    "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-4/error.svelte",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js",
-      "_stores.js"
+      "_renderer.js",
+      "_state.svelte.js",
+      "_exports.js",
+      "_utils.js",
+      "_index.js",
+      "_root.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
@@ -86,12 +115,19 @@
     "isEntry": true,
     "imports": [
       "_shared.js",
-      "_environment.js",
+      "_render-context.js",
+      "_server.js",
       "_exports.js",
       "_utils.js",
-      "_ssr.js",
+      "_index.js",
       "_internal.js"
     ]
+  },
+  "src/routes/+layout.js": {
+    "file": "entries/pages/_layout.js",
+    "name": "entries/pages/_layout",
+    "src": "src/routes/+layout.js",
+    "isEntry": true
   },
   "src/routes/+layout.svelte": {
     "file": "entries/pages/_layout.svelte.js",
@@ -99,11 +135,15 @@
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js",
-      "_stores.js"
+      "_renderer.js",
+      "_exports.js",
+      "_utils.js",
+      "_root.js",
+      "_state.svelte.js",
+      "_server.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.Dq2wnM4S.css"
+      "_app/immutable/assets/_layout.ClwJ--b6.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -112,11 +152,11 @@
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js",
+      "_renderer.js",
       "_data.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.Ds9kK8-7.css"
+      "_app/immutable/assets/_page.Bc5uUxEr.css"
     ]
   },
   "src/routes/chi-sono/+page.svelte": {
@@ -125,11 +165,11 @@
     "src": "src/routes/chi-sono/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js",
+      "_renderer.js",
       "_data.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.DiLK4fWa.css"
+      "_app/immutable/assets/_page.BSeU_vN5.css"
     ]
   },
   "src/routes/educazione-civica/+page.svelte": {
@@ -138,11 +178,11 @@
     "src": "src/routes/educazione-civica/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js",
+      "_renderer.js",
       "_data.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.To_Wg5Q8.css"
+      "_app/immutable/assets/_page.D_lwku-G.css"
     ]
   }
 }
