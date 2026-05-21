@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   import { anni, statistiche } from '$lib/data.js';
 
   let visible = false;
@@ -12,7 +13,7 @@
     n: a.materie.length,
     colore: a.colore,
     coloreFondo: a.coloreFondo,
-    href: `/educazione-civica#${a.id}`
+    href: `${base}/educazione-civica#${a.id}`
   }));
 </script>
 
@@ -34,8 +35,8 @@
         <div class="hs"><span class="hs-n">{statistiche.progettiCodice}</span><span class="hs-l">Progetti codice</span></div>
       </div>
       <div class="hero-cta">
-        <a href="/educazione-civica" class="btn-primary">Vedi tutti i progetti →</a>
-        <a href="/chi-sono" class="btn-secondary">Chi sono</a>
+        <a href="{base}/educazione-civica" class="btn-primary">Vedi tutti i progetti →</a>
+        <a href="{base}/chi-sono" class="btn-secondary">Chi sono</a>
       </div>
     </div>
     <div class="hero-deco" aria-hidden="true">
@@ -77,11 +78,11 @@
         <span class="tag" style="background:rgba(255,255,255,0.15);color:var(--accent-light)">Chi sono</span>
         <h2>Un po' di me</h2>
         <p>Studente appassionato di tecnologia, programmazione e attualità. Scopri qualcosa di più sulla mia storia.</p>
-        <a href="/chi-sono" class="btn-primary" style="margin-top:1.5rem;align-self:flex-start">Scopri di più →</a>
+        <a href="{base}/chi-sono" class="btn-primary" style="margin-top:1.5rem;align-self:flex-start">Scopri di più →</a>
       </div>
       <div class="about-deco" aria-hidden="true">
         <div class="avatar-circle">
-          <img src="/foto.jpg" alt="Matteo Gritella" />
+          <img src="{base}/foto.jpg" alt="Matteo Gritella" />
         </div>
       </div>
     </div>
@@ -146,13 +147,9 @@
   .about-banner-text { display: flex; flex-direction: column; gap: 1rem; }
   .about-banner-text h2 { font-size: 2rem; color: white; }
   .about-banner-text p { color: rgba(255,255,255,0.7); max-width: 45ch; line-height: 1.7; }
-  .avatar-circle { width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
-  .avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
+  .avatar-circle { width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 3rem; overflow: hidden; }
+  .avatar-circle img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
   @media (max-width: 768px) {
     .hero-inner { grid-template-columns: 1fr; }
     .hero-deco { display: none; }
