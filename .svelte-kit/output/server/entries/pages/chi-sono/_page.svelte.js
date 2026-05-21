@@ -1,4 +1,8 @@
-import { i as head, b as attr_class, e as ensure_array_like, c as escape_html, j as attr_style, d as stringify } from "../../../chunks/renderer.js";
+import { i as head, b as attr_class, a as attr, e as ensure_array_like, c as escape_html, j as attr_style, d as stringify } from "../../../chunks/renderer.js";
+import { b as base } from "../../../chunks/server.js";
+import "../../../chunks/url.js";
+import "@sveltejs/kit/internal/server";
+import "../../../chunks/root.js";
 import "../../../chunks/data.js";
 function _page($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
@@ -38,7 +42,7 @@ function _page($$renderer, $$props) {
         $$renderer4.push(`<title>Chi sono — Portfolio</title>`);
       });
     });
-    $$renderer2.push(`<div${attr_class("hero-chi svelte-1pus5th", void 0, { "visible": visible })}><div class="container hero-inner svelte-1pus5th"><div class="avatar-circle svelte-1pus5th"><img src="/foto.jpg" alt="Matteo Gritella" class="svelte-1pus5th"/></div> <div class="hero-text svelte-1pus5th"><span class="tag" style="background:rgba(255,255,255,0.15);color:var(--accent-light)">Presentazione</span> <h1 class="svelte-1pus5th">Ciao, sono <em class="svelte-1pus5th">Matteo Gritella</em></h1> <p class="hero-bio svelte-1pus5th">Studente di quinta superiore appassionato di tecnologia e sport.
+    $$renderer2.push(`<div${attr_class("hero-chi svelte-1pus5th", void 0, { "visible": visible })}><div class="container hero-inner svelte-1pus5th"><div class="avatar-circle svelte-1pus5th"><img${attr("src", `${stringify(base)}/foto.jpg`)} alt="Matteo Gritella" class="svelte-1pus5th"/></div> <div class="hero-text svelte-1pus5th"><span class="tag" style="background:rgba(255,255,255,0.15);color:var(--accent-light)">Presentazione</span> <h1 class="svelte-1pus5th">Ciao, sono <em class="svelte-1pus5th">Matteo Gritella</em></h1> <p class="hero-bio svelte-1pus5th">Studente di quinta superiore appassionato di tecnologia e sport.
         Durante il percorso scolastico ho realizzato programmi in C, Python e Django,
         esplorando anche temi di attualità, storia e diritti civili.</p> <div class="hero-badges svelte-1pus5th"><span class="badge svelte-1pus5th">📍 Torino, Italia</span> <span class="badge svelte-1pus5th">🎓 5ª Superiore</span></div></div></div></div> <div class="container page-content svelte-1pus5th"><section class="section two-col svelte-1pus5th"><div class="text-block svelte-1pus5th"><span class="tag svelte-1pus5th">La mia storia</span> <h2 class="svelte-1pus5th">In breve, chi sono</h2> <p class="svelte-1pus5th">Sono uno studente con una forte passione per la tecnologia e per lo sport.
         Ho scelto l'indirizzo Informatica perché era quello che mi interessava maggiormente,

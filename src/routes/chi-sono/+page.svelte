@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   import { statistiche } from '$lib/data.js';
 
   let visible = false;
@@ -32,7 +33,7 @@
 <div class="hero-chi" class:visible>
   <div class="container hero-inner">
     <div class="avatar-circle">
-      <img src="/foto.jpg" alt="Matteo Gritella" />
+      <img src="{base}/foto.jpg" alt="Matteo Gritella" />
     </div>
     <div class="hero-text">
       <span class="tag" style="background:rgba(255,255,255,0.15);color:var(--accent-light)">Presentazione</span>
@@ -157,16 +158,11 @@
 </div>
 
 <style>
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
+  .avatar-circle img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
   .hero-chi { background: linear-gradient(135deg, #1C1917 0%, #292524 100%); padding: 5rem 0 4rem; opacity: 0; transform: translateY(16px); transition: all 0.7s ease; }
   .hero-chi.visible { opacity: 1; transform: translateY(0); }
   .hero-inner { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
-  .avatar-circle { width: 130px; height: 130px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 3px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; flex-shrink: 0; }
+  .avatar-circle { width: 130px; height: 130px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 3px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; flex-shrink: 0; overflow: hidden; }
   .hero-text { display: flex; flex-direction: column; gap: 1rem; flex: 1; }
   .hero-text h1 { font-size: clamp(1.8rem, 4vw, 3rem); color: white; }
   .hero-text h1 em { color: var(--accent-light); font-style: italic; }

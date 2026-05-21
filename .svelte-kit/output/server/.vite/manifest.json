@@ -176,10 +176,13 @@
     "isEntry": true,
     "imports": [
       "_renderer.js",
+      "_server.js",
+      "_url.js",
+      "_root.js",
       "_data.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.BSeU_vN5.css"
+      "_app/immutable/assets/_page.BC2VCoah.css"
     ]
   },
   "src/routes/educazione-civica/+page.svelte": {
