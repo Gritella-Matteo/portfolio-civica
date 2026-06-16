@@ -131,8 +131,9 @@ const anni = [
         titolo: "App 1522 con Django",
         tipo: "Progetto",
         formato: "Applicazione Web (Django)",
-        riassunto: "Abbiamo realizzato con Django (framework Python per il web) una replica funzionale del sito del numero 1522 – il numero antiviolenza e stalking del Dipartimento per le Pari Opportunità della Presidenza del Consiglio dei Ministri. L'applicazione permette alle vittime di violenza domestica e stalking di accedere a risorse, richiedere aiuto e trovare i centri antiviolenza sul territorio. Il progetto ha affrontato temi di accessibilità, sicurezza dei dati e UX per utenti in situazioni di emergenza.",
+        riassunto: "Realizzazione di una piattaforma sicura per la gestione di segnalazioni civiche, ispirata al sito del numero 1522 – il numero antiviolenza e stalking del Dipartimento per le Pari Opportunità. Il database è stato progettato tramite modello Entità-Relazione (E/R), con back-end in Django (framework Python) e front-end intuitivo e accessibile, pensato per utenti in situazioni di emergenza.",
         puntiChiave: [
+          "Progettazione del database tramite modello E/R: entità, attributi e relazioni",
           "Django: modelli, viste, template e URL routing",
           "Database per la gestione dei centri antiviolenza per regione",
           "Form di contatto sicuro con gestione della privacy (GDPR)",
@@ -141,7 +142,7 @@ const anni = [
           "Violenza domestica in Italia: dati ISTAT e normativa (Codice Rosso)"
         ],
         note: 'Il 1522 è attivo 24 ore su 24, 7 giorni su 7, è gratuito e anonimo. La legge 69/2019 "Codice Rosso" ha rafforzato le tutele per le vittime di violenza di genere.',
-        tags: ["Django", "Python", "Web", "Violenza di genere", "Pari opportunità"]
+        tags: ["Django", "Python", "Web", "Database E/R", "Violenza di genere", "Pari opportunità"]
       },
       {
         id: "quinta-italiano",
@@ -150,17 +151,54 @@ const anni = [
         titolo: "Prigione Domestica",
         tipo: "Approfondimento",
         formato: "Testo / Ricerca",
-        riassunto: `Approfondimento sul tema della violenza domestica e del controllo coercitivo nelle relazioni affettive, fenomeno definito "prigione domestica" per descrivere la condizione di isolamento, paura e dipendenza psicologica in cui vivono le vittime. Il lavoro analizza le dinamiche di abuso, il ciclo della violenza, il profilo della vittima e dell'abusante, e le risorse istituzionali disponibili.`,
+        riassunto: 'Analisi statistica della violenza di genere, studio della legislazione vigente (Codice Rosso, numero 1522) e project work sulla fattibilità tecnica di strumenti digitali di supporto e protezione per le vittime. Il lavoro analizza le dinamiche di abuso, il ciclo della violenza, e descrive la condizione di isolamento e dipendenza psicologica vissuta dalle vittime, definita "prigione domestica".',
         puntiChiave: [
+          "Analisi statistica: dati ISTAT sulla violenza di genere in Italia",
           "Il ciclo della violenza: tensione, esplosione, luna di miele, riconciliazione",
           "Violenza psicologica, economica e fisica: definizioni e riconoscimento",
-          "Controllo coercitivo: isolamento dalla famiglia, controllo del denaro",
-          "Dati ISTAT: oltre 6 milioni di donne vittime di violenza in Italia",
-          "Il ruolo della letteratura nel raccontare la violenza domestica",
-          "Risorse: centri antiviolenza, CAV, numero 1522"
+          'Legge 69/2019 "Codice Rosso": tutele e procedure accelerate',
+          "Il numero 1522: funzionamento e accessibilità del servizio",
+          "Project work: fattibilità tecnica di strumenti digitali di supporto alle vittime",
+          "Controllo coercitivo: isolamento dalla famiglia, controllo del denaro"
         ],
-        note: "Collegamento con il progetto Django 1522 di Informatica e con il tema della parità di genere (SDG 5 dell'Agenda 2030).",
-        tags: ["Violenza domestica", "Genere", "Letteratura", "Diritti"]
+        note: "Collegamento diretto con il progetto Django 1522 di Informatica e con il tema della parità di genere (SDG 5 dell'Agenda 2030).",
+        tags: ["Violenza domestica", "Genere", "Statistica", "Legislazione", "Diritti"]
+      },
+      {
+        id: "quinta-saviano",
+        materia: "Italiano",
+        icona: "📖",
+        titolo: "Incontro con Roberto Saviano",
+        tipo: "Approfondimento",
+        formato: "Incontro / Lettura",
+        riassunto: `Incontro con lo scrittore Roberto Saviano a partire dal suo libro "L'amore mio non muore", un'occasione di confronto diretto su temi di legalità, criminalità organizzata e impegno civile attraverso la scrittura e il giornalismo d'inchiesta.`,
+        puntiChiave: [
+          "Roberto Saviano: percorso di scrittore e giornalista sotto scorta",
+          `"L'amore mio non muore": temi e contesto dell'opera`,
+          "Il ruolo della letteratura di denuncia nella lotta alla criminalità organizzata",
+          "Il prezzo della libertà di stampa e di espressione in Italia",
+          'Collegamento con altri lavori sulla mafia (es. "La Mattanza")'
+        ],
+        note: "",
+        tags: ["Letteratura", "Legalità", "Giornalismo", "Criminalità organizzata"]
+      },
+      {
+        id: "quinta-primolevi",
+        materia: "Italiano",
+        icona: "📖",
+        titolo: 'Primo Levi: la "zona grigia" e la vergogna del sopravvissuto',
+        tipo: "Approfondimento",
+        formato: "Testo / Ricerca",
+        riassunto: `Studio dell'opera di Primo Levi e della sua testimonianza sulla prigionia nei lager nazisti. Approfondimento dei concetti di "zona grigia" — l'area ambigua di compromesso e collaborazione forzata tra vittime e sistema concentrazionario — e della "vergogna del sopravvissuto", il senso di colpa di chi è uscito vivo dallo sterminio.`,
+        puntiChiave: [
+          'Primo Levi: testimone e scrittore della Shoah ("Se questo è un uomo")',
+          'Il concetto di "zona grigia": ambiguità morale nei lager',
+          "La vergogna del sopravvissuto: senso di colpa e disumanizzazione",
+          "La funzione della testimonianza letteraria nella memoria storica",
+          "Collegamento con lo studio del nazismo e della Shoah in Storia"
+        ],
+        note: "Collegamento diretto con l'approfondimento di Storia sul Nazismo e sulla Shoah.",
+        tags: ["Shoah", "Letteratura", "Memoria", "Testimonianza"]
       },
       {
         id: "quinta-sistemi",
@@ -169,7 +207,7 @@ const anni = [
         titolo: "Cybersecurity",
         tipo: "Approfondimento",
         formato: "Ricerca / Presentazione",
-        riassunto: "Approfondimento sulla cybersecurity: la disciplina che si occupa della protezione dei sistemi informatici, delle reti e dei dati da attacchi, danni o accessi non autorizzati. In un mondo sempre più connesso, la sicurezza informatica è diventata una questione di sicurezza nazionale e di diritti digitali dei cittadini. Il lavoro ha affrontato i principali tipi di attacco, le tecniche di difesa e il quadro normativo europeo.",
+        riassunto: "Approfondimento sulla cybersecurity: la disciplina che si occupa della protezione dei sistemi informatici, delle reti e dei dati da attacchi, danni o accessi non autorizzati. In un mondo sempre più connesso, la sicurezza informatica è diventata una questione di sicurezza nazionale e di diritti digitali dei cittadini.",
         puntiChiave: [
           "Principali minacce: malware, phishing, ransomware, social engineering",
           "Crittografia: simmetrica, asimmetrica e certificati digitali (HTTPS)",
@@ -188,7 +226,7 @@ const anni = [
         titolo: "Nazismo",
         tipo: "Approfondimento",
         formato: "Testo / Ricerca",
-        riassunto: "Studio approfondito del nazionalsocialismo tedesco: la sua origine nella crisi della Repubblica di Weimar, l'ascesa di Hitler, l'ideologia razzista e totalitaria, le leggi di Norimberga, la Shoah e la Seconda Guerra Mondiale. Il lavoro ha analizzato come uno Stato democratico possa degenerare in un regime totalitario e quali lezioni storiche e civiche possiamo trarne per il presente.",
+        riassunto: "Studio approfondito del nazionalsocialismo tedesco: la sua origine nella crisi della Repubblica di Weimar, l'ascesa di Hitler, l'ideologia razzista e totalitaria, le leggi di Norimberga, la Shoah e la Seconda Guerra Mondiale.",
         puntiChiave: [
           "Crisi di Weimar e condizioni economico-sociali che favorirono l'ascesa di Hitler",
           "Ideologia nazista: razzismo, antisemitismo, pangermanismo e spazio vitale",
@@ -199,6 +237,64 @@ const anni = [
         ],
         note: 'Articolo 3 della Costituzione italiana: "Tutti i cittadini hanno pari dignità sociale e sono eguali davanti alla legge, senza distinzione di sesso, di razza, di lingua, di religione..." — una risposta diretta alle leggi razziali.',
         tags: ["Nazismo", "Shoah", "Totalitarismo", "Diritti umani", "Storia contemporanea"]
+      },
+      {
+        id: "quinta-operazioni-naziste",
+        materia: "Storia",
+        icona: "📜",
+        titolo: 'Le altre "operazioni" naziste: Aktion T4 e Lebensborn',
+        tipo: "Approfondimento",
+        formato: "Testo / Ricerca",
+        riassunto: `Approfondimento su due programmi meno conosciuti ma centrali nell'ideologia nazista: l'Aktion T4, il programma di eutanasia che portò allo sterminio sistematico di persone con disabilità fisiche e mentali, e il progetto Lebensborn, finalizzato alla creazione di una "razza ariana pura" tramite la selezione e l'allevamento controllato di bambini.`,
+        puntiChiave: [
+          "Aktion T4: sterminio sistematico di persone con disabilità (1939-1941)",
+          `Criteri pseudo-scientifici di "selezione" e l'ideologia dell'eugenetica nazista`,
+          'Lebensborn: il progetto per la "razza ariana pura" e il rapimento di bambini',
+          "Il ruolo delle SS nella gestione di entrambi i programmi",
+          'Collegamento con il concetto più ampio di "vite indegne di essere vissute"',
+          "Le conseguenze giuridiche: i processi successivi alla guerra"
+        ],
+        note: "Questi programmi mostrano come l'ideologia nazista non si limitò alla persecuzione razziale ma colpì sistematicamente anche le persone con disabilità, spesso ignorate nella narrazione comune della Shoah.",
+        tags: ["Nazismo", "Eugenetica", "Diritti umani", "Disabilità", "Storia contemporanea"]
+      },
+      {
+        id: "quinta-costituzione",
+        materia: "Storia",
+        icona: "⚖️",
+        titolo: "La Costituzione e i suoi principi fondamentali (artt. 1-12)",
+        tipo: "Approfondimento",
+        formato: "Testo / Ricerca",
+        riassunto: `Studio dei primi dodici articoli della Costituzione italiana, i cosiddetti "Principi Fondamentali". Questi articoli sanciscono i valori cardine della Repubblica: la sovranità popolare, i diritti inviolabili dell'uomo, l'uguaglianza, il lavoro come fondamento della Repubblica, e i rapporti tra Stato, confessioni religiose e comunità internazionale.`,
+        puntiChiave: [
+          "Art. 1: l'Italia è una Repubblica democratica fondata sul lavoro",
+          "Art. 2: i diritti inviolabili dell'uomo, sia come singolo sia nelle formazioni sociali",
+          "Art. 3: il principio di uguaglianza formale e sostanziale",
+          "Art. 4: il diritto-dovere al lavoro",
+          "Artt. 5-6: autonomie locali e tutela delle minoranze linguistiche",
+          "Art. 7-8: rapporti tra Stato e Chiesa, libertà religiosa",
+          "Artt. 9-12: paesaggio e patrimonio culturale, condizione giuridica dello straniero, bandiera nazionale"
+        ],
+        note: "I Principi Fondamentali sono nati come reazione diretta alle esperienze dei totalitarismi (fascismo e nazismo) e rappresentano il nucleo intangibile della Costituzione, non modificabile nemmeno con la procedura di revisione costituzionale.",
+        tags: ["Costituzione", "Diritti fondamentali", "Democrazia", "Istituzioni"]
+      },
+      {
+        id: "quinta-68",
+        materia: "Storia",
+        icona: "📜",
+        titolo: "Il movimento del '68",
+        tipo: "Approfondimento",
+        formato: "Testo / Ricerca",
+        riassunto: "Studio del 1968 come anno di svolta culturale, sociale e politica a livello globale. Il movimento studentesco e operaio contestò le strutture tradizionali dell'autorità — famiglia, scuola, università, fabbrica — rivendicando nuovi diritti civili, la fine delle guerre coloniali e una maggiore partecipazione democratica.",
+        puntiChiave: [
+          "Contesto globale: contestazioni studentesche da Parigi a Berkeley a Roma",
+          "Le rivendicazioni: accesso all'istruzione, diritti civili, fine della guerra in Vietnam",
+          "L'autunno caldo italiano: l'alleanza tra studenti e operai",
+          "Il rapporto con il femminismo e la nascita dei nuovi movimenti sociali",
+          "Le conseguenze: riforme nei sistemi scolastici e universitari",
+          "Eredità culturale: cambiamento dei costumi sociali e familiari"
+        ],
+        note: "",
+        tags: ["Movimenti sociali", "Diritti civili", "Storia contemporanea"]
       }
     ]
   }

@@ -25,11 +25,12 @@
   };
 
   const materiaColore = {
-    'Informatica': { bg: '#EFF6FF', text: '#1D4ED8' },
-    'Italiano': { bg: '#FFF7ED', text: '#C2410C' },
-    'Storia': { bg: '#FEF2F2', text: '#DC2626' },
-    'Sistemi': { bg: '#F0FDF4', text: '#166534' },
-  };
+  'Informatica': { bg: '#EFF6FF', text: '#1D4ED8' },
+  'Italiano': { bg: '#FFF7ED', text: '#C2410C' },
+  'Storia': { bg: '#FEF2F2', text: '#DC2626' },
+  'Sistemi': { bg: '#F0FDF4', text: '#166534' },
+  'Inglese': { bg: '#FDF2F8', text: '#BE185D' },
+};
 </script>
 
 <svelte:head><title>Educazione Civica — Portfolio</title></svelte:head>
