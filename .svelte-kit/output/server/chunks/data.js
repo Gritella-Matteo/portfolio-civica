@@ -349,25 +349,6 @@ const anni = [
         ],
         note: "",
         tags: ["Internet safety", "Cybersecurity", "Digital citizenship"]
-      },
-      {
-        id: "quinta-english-ai",
-        materia: "Inglese",
-        icona: "🤖",
-        titolo: "Advantages and Disadvantages of Artificial Intelligence",
-        tipo: "Approfondimento",
-        formato: "Testo / Ricerca",
-        riassunto: "Advantages and disadvantages of artificial intelligence. This topic explores the benefits of AI, such as increased efficiency, automation of repetitive tasks and advances in medicine and science, alongside its drawbacks, including job displacement, algorithmic bias, privacy concerns and the ethical implications of autonomous decision-making.",
-        puntiChiave: [
-          "Advantages: efficiency, automation, scientific and medical progress",
-          "Disadvantages: job displacement and economic inequality",
-          "Algorithmic bias and fairness in AI decision-making",
-          "Privacy concerns related to data collection for AI training",
-          "Ethical implications of autonomous systems",
-          "The EU AI Act: regulating artificial intelligence by risk level"
-        ],
-        note: "",
-        tags: ["Artificial Intelligence", "Ethics", "Technology"]
       }
     ]
   }
