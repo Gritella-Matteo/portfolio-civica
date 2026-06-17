@@ -198,44 +198,6 @@ export const anni = [
         tags: ['Shoah', 'Letteratura', 'Memoria', 'Testimonianza']
       },
       {
-        id: 'quinta-sistemi',
-        materia: 'Sistemi',
-        icona: '🔐',
-        titolo: 'Cybersecurity',
-        tipo: 'Approfondimento',
-        formato: 'Ricerca / Presentazione',
-        riassunto: 'Approfondimento sulla cybersecurity: la disciplina che si occupa della protezione dei sistemi informatici, delle reti e dei dati da attacchi, danni o accessi non autorizzati. In un mondo sempre più connesso, la sicurezza informatica è diventata una questione di sicurezza nazionale e di diritti digitali dei cittadini.',
-        puntiChiave: [
-          'Principali minacce: malware, phishing, ransomware',
-          'Crittografia: simmetrica, asimmetrica e certificati digitali (HTTPS)',
-          'Attacchi DDoS e vulnerabilità delle infrastrutture critiche',
-          'NIS2: la direttiva europea sulla sicurezza delle reti (2022)',
-          'GDPR e protezione dei dati personali nel contesto della cybersecurity',
-          'Cybersecurity come diritto digitale del cittadino'
-        ],
-        note: 'L\'Agenzia per la Cybersicurezza Nazionale (ACN) è nata in Italia nel 2021 per coordinare la protezione dello spazio cibernetico nazionale.',
-        tags: ['Sicurezza informatica', 'Reti', 'GDPR', 'Diritti digitali']
-      },
-      {
-        id: 'quinta-storia',
-        materia: 'Storia',
-        icona: '📜',
-        titolo: 'Nazismo',
-        tipo: 'Approfondimento',
-        formato: 'Testo / Ricerca',
-        riassunto: 'Studio approfondito del nazionalsocialismo tedesco: la sua origine nella crisi della Repubblica di Weimar, l\'ascesa di Hitler, l\'ideologia razzista e totalitaria, le leggi di Norimberga, la Shoah e la Seconda Guerra Mondiale.',
-        puntiChiave: [
-          'Crisi di Weimar e condizioni economico-sociali che favorirono l\'ascesa di Hitler',
-          'Ideologia nazista: razzismo, antisemitismo, pangermanismo e spazio vitale',
-          'Le leggi di Norimberga (1935): strumento giuridico della persecuzione',
-          'La Shoah: Soluzione finale: campi di concentramento e di sterminio, 6 milioni di vittime',
-          'Il processo di Norimberga e la nascita del diritto internazionale penale',
-          'Collegamento con la Costituzione italiana: nata in reazione ai totalitarismi'
-        ],
-        note: 'Articolo 3 della Costituzione italiana: "Tutti i cittadini hanno pari dignità sociale e sono eguali davanti alla legge, senza distinzione di sesso, di razza, di lingua, di religione..." — una risposta diretta alle leggi razziali.',
-        tags: ['Nazismo', 'Shoah', 'Totalitarismo', 'Diritti umani', 'Storia contemporanea']
-      },
-      {
         id: 'quinta-operazioni-naziste',
         materia: 'Storia',
         icona: '📜',
