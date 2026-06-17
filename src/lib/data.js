@@ -133,13 +133,11 @@ export const anni = [
         formato: 'Applicazione Web (Django)',
         riassunto: 'Realizzazione di una piattaforma sicura per la gestione di segnalazioni civiche, ispirata al sito del numero 1522 – il numero antiviolenza e stalking del Dipartimento per le Pari Opportunità. Il database è stato progettato tramite modello Entità-Relazione (E/R), con back-end in Django (framework Python) e front-end intuitivo e accessibile, pensato per utenti in situazioni di emergenza.',
         puntiChiave: [
+          'Il numero 1522: cos\'è, chi lo gestisce e a chi si rivolge',
           'Progettazione del database tramite modello E/R: entità, attributi e relazioni',
           'Django: modelli, viste, template e URL routing',
           'Database per la gestione dei centri antiviolenza per regione',
           'Form di contatto sicuro con gestione della privacy (GDPR)',
-          'Design accessibile e pensato per utenti in stato di stress',
-          'Il numero 1522: cos\'è, chi lo gestisce e a chi si rivolge',
-          'Violenza domestica in Italia: dati ISTAT e normativa (Codice Rosso)'
         ],
         note: 'Il 1522 è attivo 24 ore su 24, 7 giorni su 7, è gratuito e anonimo. La legge 69/2019 "Codice Rosso" ha rafforzato le tutele per le vittime di violenza di genere.',
         tags: ['Django', 'Python', 'Web', 'Database E/R', 'Violenza di genere', 'Pari opportunità']
@@ -151,7 +149,7 @@ export const anni = [
         titolo: 'Prigione Domestica',
         tipo: 'Approfondimento',
         formato: 'Testo / Ricerca',
-        riassunto: 'Analisi statistica della violenza di genere, studio della legislazione vigente (Codice Rosso, numero 1522) e project work sulla fattibilità tecnica di strumenti digitali di supporto e protezione per le vittime. Il lavoro analizza le dinamiche di abuso, il ciclo della violenza, e descrive la condizione di isolamento e dipendenza psicologica vissuta dalle vittime, definita "prigione domestica".',
+        riassunto: 'Analisi statistica della violenza di genere, studio della legislazione vigente (Codice Rosso, numero 1522) e lavoro di gruppo sulla fattibilità tecnica di strumenti digitali di supporto e protezione per le vittime. Il lavoro analizza le dinamiche di abuso, il ciclo della violenza, e descrive la condizione di isolamento e dipendenza psicologica vissuta dalle vittime, definita "prigione domestica".',
         puntiChiave: [
           'Analisi statistica: dati ISTAT sulla violenza di genere in Italia',
           'Il ciclo della violenza: tensione, esplosione, luna di miele, riconciliazione',
@@ -177,7 +175,6 @@ export const anni = [
           '"L\'amore mio non muore": temi e contesto dell\'opera',
           'Il ruolo della letteratura di denuncia nella lotta alla criminalità organizzata',
           'Il prezzo della libertà di stampa e di espressione in Italia',
-          'Collegamento con altri lavori sulla mafia (es. "La Mattanza")'
         ],
         note: '',
         tags: ['Letteratura', 'Legalità', 'Giornalismo', 'Criminalità organizzata']
@@ -192,7 +189,7 @@ export const anni = [
         riassunto: 'Studio dell\'opera di Primo Levi e della sua testimonianza sulla prigionia nei lager nazisti. Approfondimento dei concetti di "zona grigia" — l\'area ambigua di compromesso e collaborazione forzata tra vittime e sistema concentrazionario — e della "vergogna del sopravvissuto", il senso di colpa di chi è uscito vivo dallo sterminio.',
         puntiChiave: [
           'Primo Levi: testimone e scrittore della Shoah ("Se questo è un uomo")',
-          'Il concetto di "zona grigia": ambiguità morale nei lager',
+          'Il concetto di "zona grigia" (I sommersi e i salvati): ambiguità morale nei lager',
           'La vergogna del sopravvissuto: senso di colpa e disumanizzazione',
           'La funzione della testimonianza letteraria nella memoria storica',
           'Collegamento con lo studio del nazismo e della Shoah in Storia'
@@ -209,7 +206,7 @@ export const anni = [
         formato: 'Ricerca / Presentazione',
         riassunto: 'Approfondimento sulla cybersecurity: la disciplina che si occupa della protezione dei sistemi informatici, delle reti e dei dati da attacchi, danni o accessi non autorizzati. In un mondo sempre più connesso, la sicurezza informatica è diventata una questione di sicurezza nazionale e di diritti digitali dei cittadini.',
         puntiChiave: [
-          'Principali minacce: malware, phishing, ransomware, social engineering',
+          'Principali minacce: malware, phishing, ransomware',
           'Crittografia: simmetrica, asimmetrica e certificati digitali (HTTPS)',
           'Attacchi DDoS e vulnerabilità delle infrastrutture critiche',
           'NIS2: la direttiva europea sulla sicurezza delle reti (2022)',
@@ -231,7 +228,7 @@ export const anni = [
           'Crisi di Weimar e condizioni economico-sociali che favorirono l\'ascesa di Hitler',
           'Ideologia nazista: razzismo, antisemitismo, pangermanismo e spazio vitale',
           'Le leggi di Norimberga (1935): strumento giuridico della persecuzione',
-          'La Shoah: Endlösung, campi di concentramento e di sterminio, 6 milioni di vittime',
+          'La Shoah: Soluzione finale: campi di concentramento e di sterminio, 6 milioni di vittime',
           'Il processo di Norimberga e la nascita del diritto internazionale penale',
           'Collegamento con la Costituzione italiana: nata in reazione ai totalitarismi'
         ],
@@ -272,7 +269,7 @@ export const anni = [
           'Art. 4: il diritto-dovere al lavoro',
           'Artt. 5-6: autonomie locali e tutela delle minoranze linguistiche',
           'Art. 7-8: rapporti tra Stato e Chiesa, libertà religiosa',
-          'Artt. 9-12: paesaggio e patrimonio culturale, condizione giuridica dello straniero, bandiera nazionale'
+          'Artt. 9-12: paesaggio e patrimonio culturale, condizione giuridica dello straniero, ripudio della guerra, bandiera nazionale'
         ],
         note: 'I Principi Fondamentali sono nati come reazione diretta alle esperienze dei totalitarismi (fascismo e nazismo) e rappresentano il nucleo intangibile della Costituzione, non modificabile nemmeno con la procedura di revisione costituzionale.',
         tags: ['Costituzione', 'Diritti fondamentali', 'Democrazia', 'Istituzioni']
@@ -295,6 +292,82 @@ export const anni = [
         ],
         note: '',
         tags: ['Movimenti sociali', 'Diritti civili', 'Storia contemporanea']
+      },
+      {
+        id: 'quinta-english-pollution',
+        materia: 'Inglese',
+        icona: '🌍',
+        titolo: 'Water and Soil Pollution',
+        tipo: 'Approfondimento',
+        formato: 'Testo / Ricerca',
+        riassunto: 'Water and soil pollution and the possible measures for preventing it. This topic explores the main causes of water and soil contamination — industrial waste, agricultural chemicals, plastic pollution and improper waste disposal — and analyzes the environmental and health consequences. It also covers prevention strategies, sustainable agriculture practices, and international policies aimed at protecting natural resources.',
+        puntiChiave: [
+          'Main causes of water pollution: industrial waste, agricultural runoff, plastic',
+          'Soil contamination: pesticides, heavy metals, deforestation',
+          'Environmental and health consequences of pollution',
+          'Prevention measures: wastewater treatment, sustainable farming',
+          'International policies and regulations on environmental protection',
+          'Connection to SDG 6 (Clean Water) and SDG 15 (Life on Land)'
+        ],
+        note: '',
+        tags: ['Environment', 'Pollution', 'Sustainability']
+      },
+      {
+        id: 'quinta-english-internet-ethics',
+        materia: 'Inglese',
+        icona: '💻',
+        titolo: 'Social and Ethical Problems of Internet',
+        tipo: 'Approfondimento',
+        formato: 'Testo / Ricerca',
+        riassunto: 'Social and ethical problems of Internet. This topic examines the main ethical challenges raised by the widespread use of the Internet, including privacy violations, cyberbullying, misinformation, digital addiction and the digital divide. It discusses how these issues affect individuals and society, and explores possible solutions such as digital literacy and stronger regulation.',
+        puntiChiave: [
+          'Privacy violations and data exploitation by tech companies',
+          'Cyberbullying and online harassment',
+          'Misinformation and the spread of fake news',
+          'Digital addiction and its psychological effects',
+          'The digital divide: unequal access to technology',
+          'Possible solutions: digital literacy, regulation, ethical design'
+        ],
+        note: '',
+        tags: ['Internet', 'Ethics', 'Digital citizenship']
+      },
+      {
+        id: 'quinta-english-online-dangers',
+        materia: 'Inglese',
+        icona: '🔒',
+        titolo: 'Online Dangers and How to Use Internet Safely',
+        tipo: 'Approfondimento',
+        formato: 'Testo / Ricerca',
+        riassunto: 'Online dangers and how to use internet safely. This topic covers the main risks young people face online — phishing, scams, identity theft, grooming and exposure to inappropriate content — and provides practical guidelines for safe internet use, such as protecting personal information, recognizing suspicious links, and using strong passwords.',
+        puntiChiave: [
+          'Common online dangers: phishing, scams, identity theft',
+          'Risks for minors: grooming and inappropriate content',
+          'Best practices: strong passwords, two-factor authentication',
+          'Recognizing suspicious links and fraudulent websites',
+          'Protecting personal information on social media',
+          'The role of parental control and digital education'
+        ],
+        note: '',
+        tags: ['Internet safety', 'Cybersecurity', 'Digital citizenship']
+      },
+      {
+        id: 'quinta-english-ai',
+        materia: 'Inglese',
+        icona: '🤖',
+        titolo: 'Advantages and Disadvantages of Artificial Intelligence',
+        tipo: 'Approfondimento',
+        formato: 'Testo / Ricerca',
+        riassunto: 'Advantages and disadvantages of artificial intelligence. This topic explores the benefits of AI, such as increased efficiency, automation of repetitive tasks and advances in medicine and science, alongside its drawbacks, including job displacement, algorithmic bias, privacy concerns and the ethical implications of autonomous decision-making.',
+        puntiChiave: [
+          'Advantages: efficiency, automation, scientific and medical progress',
+          'Disadvantages: job displacement and economic inequality',
+          'Algorithmic bias and fairness in AI decision-making',
+          'Privacy concerns related to data collection for AI training',
+          'Ethical implications of autonomous systems',
+          'The EU AI Act: regulating artificial intelligence by risk level'
+        ],
+        note: '',
+        tags: ['Artificial Intelligence', 'Ethics', 'Technology']
       }
     ]
   }

@@ -46,8 +46,7 @@ function _page($$renderer, $$props) {
         Durante il percorso scolastico ho realizzato programmi in C, Python e Django,
         esplorando anche temi di attualità, storia e diritti civili.</p> <div class="hero-badges svelte-1pus5th"><span class="badge svelte-1pus5th">📍 Torino, Italia</span> <span class="badge svelte-1pus5th">🎓 5ª Superiore</span></div></div></div></div> <div class="container page-content svelte-1pus5th"><section class="section two-col svelte-1pus5th"><div class="text-block svelte-1pus5th"><span class="tag svelte-1pus5th">La mia storia</span> <h2 class="svelte-1pus5th">In breve, chi sono</h2> <p class="svelte-1pus5th">Sono uno studente con una forte passione per la tecnologia e per lo sport.
         Ho scelto l'indirizzo Informatica perché era quello che mi interessava maggiormente,
-        è un settore in costante evoluzione. Durante questi anni però ho capito che non era
-        quello che volevo fare nella vita.</p> <p class="svelte-1pus5th">Mi interessa capire come funzionano le cose, che si tratti di un
+        è un settore in costante evoluzione.</p> <p class="svelte-1pus5th">Mi interessa capire come funzionano le cose, che si tratti di un
         algoritmo, di un'istituzione politica o di un fenomeno sociale. L'educazione civica
         mi ha aiutato a connettere il mondo della tecnologia con quello dei diritti e della
         società.</p> <p class="svelte-1pus5th">Nel tempo libero amo giocare ai videogiochi, seguire l'attualità internazionale

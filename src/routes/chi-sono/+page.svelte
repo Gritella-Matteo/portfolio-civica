@@ -60,8 +60,7 @@
       <p>
         Sono uno studente con una forte passione per la tecnologia e per lo sport.
         Ho scelto l'indirizzo Informatica perché era quello che mi interessava maggiormente,
-        è un settore in costante evoluzione. Durante questi anni però ho capito che non era
-        quello che volevo fare nella vita.
+        è un settore in costante evoluzione.
       </p>
       <p>
         Mi interessa capire come funzionano le cose, che si tratti di un
